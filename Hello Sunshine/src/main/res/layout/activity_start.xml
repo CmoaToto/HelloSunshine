@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.cmoatoto.hellosunshine.StartActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/activity_start_explain_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/activity_start_explain"
+        android:autoLink="web"/>
+
+    <Button
+        android:id="@+id/activity_start_startstop_button"
+        android:text="@string/activity_start_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/activity_start_explain_textview"
+        android:layout_marginTop="8dp"/>
+
+    <CheckBox
+        android:id="@+id/activity_start_startonboot_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_start_startstop_button"
+        android:layout_marginTop="8dp"
+        android:text="@string/activity_start_startonboot"/>
+
+    <Button
+        android:id="@+id/activity_start_playsound_button"
+        android:text="@string/activity_start_playsound"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageButton
+        android:id="@+id/activity_start_volumeless_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/activity_start_playsound_button"
+        android:src="@drawable/ic_device_access_volume_less"/>
+
+    <ImageButton
+        android:id="@+id/activity_start_volumemore_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/activity_start_playsound_button"
+        android:src="@drawable/ic_device_access_volume_more"/>
+
+</RelativeLayout>

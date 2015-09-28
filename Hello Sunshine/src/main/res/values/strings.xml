@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hello Sunshine</string>
+
+    <string name="activity_start_title">@string/app_name</string>
+    <string name="activity_start_start">Start</string>
+    <string name="activity_start_stop">Stop</string>
+    <string name="activity_start_playsound">Test sound</string>
+    <string name="activity_start_explain">Hello Sunshine is the app to shine your day. It will say Hi ! everytime you take your phone !\n\nThis is the great app designed for the XKCD phone ( http://xkcd.com/1363/ )\n\nStart the background service (a notification tells you it is running…) and forget it.\n\nThen, everytime your phone sees the light (when you take it out from your pocket for example), it will tell you \"Hi !\".</string>
+    <string name="activity_start_startonboot">Start on boot</string>
+
+    <string name="sound_showvalue">\"Hi!\" volume = %d</string>
+
+    <string name="notif_title">@string/app_name</string>
+    <string name="notif_detail">Sunshine observer is watching</string>
+    <string name="notif_stop">@string/activity_start_stop</string>
+
+</resources>
