@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///run/media/CmoaToto/Data/workspace/Dropbox/HelloSunshine/Hello Sunshine/Hello Sunshine.iml" filepath="/run/media/CmoaToto/Data/workspace/Dropbox/HelloSunshine/Hello Sunshine/Hello Sunshine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hello Sunshine/Hello Sunshine.iml" filepath="$PROJECT_DIR$/Hello Sunshine/Hello Sunshine.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloSunshine.iml" filepath="$PROJECT_DIR$/HelloSunshine.iml" />
     </modules>
   </component>
 </project>
-
