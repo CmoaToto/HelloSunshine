@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -18,6 +16,8 @@ import java.io.IOException;
 
 
 public class StartActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+
+    private static final String TAG = SunshineService.class.getName();
 
     private Button mStartStopButton;
 
@@ -32,6 +32,9 @@ public class StartActivity extends Activity implements View.OnClickListener, Com
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (BuildConfig.DEBUG) {
+            Log.d(TAG, "start in DEBUG mode");
+        }
         setContentView(R.layout.activity_start);
 
         mStartStopButton = (Button) findViewById(R.id.activity_start_startstop_button);

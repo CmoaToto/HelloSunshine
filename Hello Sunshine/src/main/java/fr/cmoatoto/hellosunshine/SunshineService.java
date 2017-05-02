@@ -53,7 +53,9 @@ public class SunshineService extends Service implements SensorEventListener {
         mState = State.AWAKE;
 
         if (lightSensor != null) {
-            Log.d(TAG, "Sensor.TYPE_LIGHT Available :)");
+            if (BuildConfig.DEBUG) {
+                Log.d(TAG, "Sensor.TYPE_LIGHT Available :)");
+            }
             mSensorManager.registerListener(
                     this,
                     lightSensor,
@@ -61,7 +63,9 @@ public class SunshineService extends Service implements SensorEventListener {
 
             NotificationHelper.showCallNotification(this);
         } else {
-            Log.d(TAG, "Sensor.TYPE_LIGHT NOT Available :(");
+            if (BuildConfig.DEBUG) {
+                Log.d(TAG, "Sensor.TYPE_LIGHT NOT Available :(");
+            }
         }
     }
 
@@ -109,10 +113,7 @@ public class SunshineService extends Service implements SensorEventListener {
     }
 
     private boolean isShining(float newValue) {
-        if (mState == State.AWAKE || newValue < VALUE_TO_WAKE_UP || mLastTimeOfSleep + MIN_DELAY_BEFORE_SLEEP > System.currentTimeMillis()) {
-            return false;
-        }
-        return true;
+        return !(mState == State.AWAKE || newValue < VALUE_TO_WAKE_UP || mLastTimeOfSleep + MIN_DELAY_BEFORE_SLEEP > System.currentTimeMillis());
     }
 
     private void helloSunshine() {
