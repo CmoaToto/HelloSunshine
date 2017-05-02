@@ -26,28 +26,28 @@ public class SharedPrefUtils {
      * Stock String preferences
      */
     private static void setPreference(Context c, String name, String value) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().putString(name, value).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().putString(name, value).apply();
     }
 
     /**
      * Stock Boolean preferences
      */
     private static void setPreference(Context c, String name, boolean value) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().putBoolean(name, value).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().putBoolean(name, value).apply();
     }
 
     /**
      * Stock Integer preferences
      */
     private static void setPreference(Context c, String name, int value) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().putInt(name, value).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().putInt(name, value).apply();
     }
 
     /**
      * Stock Float preferences
      */
     private static void setPreference(Context c, String name, float value) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().putFloat(name, value).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().putFloat(name, value).apply();
     }
 
 //    /**
@@ -61,7 +61,7 @@ public class SharedPrefUtils {
      * Stock Set preferences
      */
     private static void setStringSetPreference(Context c, String name, Set<String> values) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().putStringSet(name, values).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().putStringSet(name, values).apply();
     }
 
     /**
@@ -123,7 +123,7 @@ public class SharedPrefUtils {
      * Clear prefs for the specified key
      */
     private static void removePreference(Context c, String key) {
-        PreferenceManager.getDefaultSharedPreferences(c).edit().remove(key).commit();
+        PreferenceManager.getDefaultSharedPreferences(c).edit().remove(key).apply();
     }
 
     // And now the public getters and setters

@@ -1,13 +1,11 @@
 package fr.cmoatoto.hellosunshine;
 
-import android.app.Activity;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 
 
 /**
@@ -28,8 +26,8 @@ public class NotificationHelper {
         stopIntent.putExtra(SunshineService.STOPSELF_KEY, true);
         PendingIntent stopPendingIntent = PendingIntent.getService(s, 0, stopIntent, 0);
 
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(s)
+        Notification.Builder mBuilder =
+                new Notification.Builder(s)
                         .setSmallIcon(R.drawable.ic_notif)
                         .setContentTitle(s.getString(R.string.notif_title))
                         .setContentText(s.getString(R.string.notif_detail))
